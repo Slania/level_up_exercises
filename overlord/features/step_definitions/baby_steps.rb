@@ -20,10 +20,18 @@ end
 
 Given /^I have activated the bomb$/ do
   steps %{
-    'I am on the arming page'
-    'I fill in "activation_code" with "1234"'
-    'I click "submit"'
+    Given I am on the arming page
+    And I fill in "activation_code" with "1234"
+    And I click "submit"
   }
+end
+
+Then /^I should see a warning with "(\d+)" retries left$/ do |retries|
+  step "I should see \"Nope, nope, nope, nope. You have #{retries} retries left\""
+end
+
+Then /^I should not see a warning with "(\d+)" retries left$/ do |retries|
+  step "I should not see \"Nope, nope, nope, nope. You have #{retries} retries left\""
 end
 
 Then /^I reset$/ do

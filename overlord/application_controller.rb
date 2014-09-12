@@ -13,10 +13,12 @@ class ApplicationController
 
     apply_parameters session[:bomb], request.params
     to = STATES.key(ACTION[request.path_info]).to_s
-    message, transitioned, redirected = transition(session[:bomb], to)
+    result = transition(session[:bomb], to)
     override_defaults session[:bomb], request.params
 
-    [STATES[session[:bomb].name.intern], transitioned || redirected, message]
+    {destination: STATES[session[:bomb].name.intern],
+     redirected: result[:transitioned] || result[:redirected],
+     message: result[:message]}
   end
 
   def apply_parameters bomb, params

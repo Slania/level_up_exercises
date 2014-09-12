@@ -12,7 +12,7 @@ class Overlord < Sinatra::Application
   Tilt.register Tilt::ERBTemplate, 'html.erb'
 
   before do
-    @destination, @redirected, @message = ApplicationController.new.service(get_in_memory_session, request)
+    @destination, @redirected, @message = ApplicationController.new.service(get_in_memory_session, request).values
   end
 
   get '/' do

@@ -34,6 +34,23 @@ class State
     if @name.eql? StateMachine.active
     	@state[:retries] -= 1
     end
+    self
+  end
+
+  def transitionable?
     @state[:retries] && @state[:retries] <= 0
   end
+
+  def dormant?
+    @name.eql? StateMachine.dormant
+  end
+
+  def active?
+    @name.eql? StateMachine.active
+  end
+
+  def blown?
+    @name.eql? StateMachine.blown
+  end
+  
 end

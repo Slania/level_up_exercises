@@ -1,8 +1,8 @@
 Feature: Arming the bomb
-  In order to arm the bomb
   As a user
   I need to type in a valid activation code
   And optionally a timer value
+  In order to arm the bomb
 
   Scenario: View bomb arming page
     Given I am on the arming page
