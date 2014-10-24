@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="container">
+		<div class="col-md-4">
+			<table class="table" style="width: 80%">
+				<th style="text-align: center;"><input id="search" type="text" style="text-align: center;" placeholder="Search"></input></th>
+			</table>
+		</div>
+		<div class="col-md-8">
+		</div>
+	</div>
+	<div class="container">
+		<div id="channels" class="col-md-4">
+			<div class="row" style="height: 600px; overflow-y: scroll">
+				<ul id="slack-channels" class="nav nav-pills nav-stacked slack-channels">
+					<% @channels.each do |channel| %>
+					<li data-value="<%= channel[:id] %>" class="draggable-channels active"><a href="#"><%= channel[:name] %></a></li>
+					<% end %>
+				</ul>
+			</div>
+			<div class="row">
+				<div id="added-channels" style="margin-top: 14px;">
+					<table class="table" style="width: 80%;">
+						<th style="text-align: center;">Added Channels</th>
+					</table>
+					<ul class="nav nav-pills nav-stacked slack-channels">
+					</ul>
+				</div>		
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="droppable-container">
+				<div id="moodContainer"></div>
+			</div>
+			<div class="droppable-container">
+				<div id="countContainer"></div>
+			</div>
+			<div class="row">
+				<div class="input-daterange input-group centered" id="datepicker">
+				    <input type="text" class="input-sm form-control" name="start" />
+				    <span class="input-group-addon">to</span>
+				    <input type="text" class="input-sm form-control" name="end" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<button id="refresh" style="width: 100%;"type="button" class="btn btn-default btn-default centered" data-loading-text="<span class='glyphicon glyphicon-asterisk'</span>">
+				  		<span class="glyphicon glyphicon-refresh"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

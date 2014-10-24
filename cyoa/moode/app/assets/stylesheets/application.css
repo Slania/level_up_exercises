@@ -11,5 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require bootstrap.css
+ *= require bootstrap-theme.css
+ *= require datepicker.css
+ *= require datepicker3.css
+ *= require jquery-ui.css
+ *= require jquery-ui.structure.css
+ *= require jquery-ui.theme.css
  *= require_self
  */

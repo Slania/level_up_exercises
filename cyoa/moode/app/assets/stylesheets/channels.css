@@ -1,0 +1,42 @@
+.drop-here {
+	border: 2px solid blue;
+	border-radius: 7px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.ui-draggable-dragging {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+  	background-color: #428bca;
+  	border-radius: 4px;
+  	width: 200px;
+}
+
+#search {
+  border: 0px;
+}
+
+.ui-draggable-dragging a {
+	color: #fff;
+}
+
+.slack-channels {
+	width: 80%;
+}
+
+::-webkit-input-placeholder {
+   color: #83BFF2;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #83BFF2;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #83BFF2;
+}
+
+:-ms-input-placeholder {  
+   color: #83BFF2;
+}

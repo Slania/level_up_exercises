@@ -1,0 +1,118 @@
+\df indexer.
+\df indexer
+\df indexer
+\df indexer.
+\df indexer
+\df indexer.index__create 
+select * from pg_proc;
+select * from pg_proc;
+qq
+\x
+qq
+select * from pg_proc;
+select * from pg_proc;
+\df indexer.
+select * from pg_proc where proname = 'indexer.index__create';
+select * from pg_proc where proname = 'indexer.';
+\df indexer.index__create
+select * from pg_proc where proname = 'indexer.index__Create';
+select * from pg_proc where proname = 'indexer.index__create';
+select * from pg_proc where proname = 'indexer.index__create';
+select * from tools.pg_proc where proname = 'indexer.index__create';
+select * from tools where proname = 'indexer.index__create';
+\df indexer.index__create
+select * from pg_proc where proname = 'index__create';
+select * from pg_proc where proname = 'index__create';
+select count(*)_ from pg_proc where proname = 'index__create';
+select count(*) from pg_proc where proname = 'index__create';
+\df indexer.
+select pg_get_function_arguments('indexer.index__create(text, text, boolean, text)'::regprocedure) from pg_proc where proname = 'index__create';
+select pg_get_function_arguments('indexer.index__create(text, text, boolean, text)'::regprocedure);
+select pg_get_function_arguments('indexer.index__create(text, text, boolean, text, text)'::regprocedure);
+select pg_get_function_arguments('indexer.index__create(text, text, boolean, text, text, text)'::regprocedure);
+select * from pg_proc where proname = 'index__create';
+select count(*) from pg_proc where proname = 'index__create';
+select pg_get_function_arguments('indexer.index__create(text, text, boolean, text, text, text)'::regprocedure);
+quit
+\q
+\d
+create table Logic (name varchar (200), score int);
+\d
+\d logic 
+insert into logic ('sri', 100)
+;
+insert into logic values ('sri', 100)
+;
+insert into logic values ('pras', 200);
+selet * from logic;
+select * from logic;
+insert into logic values ('rand', 50);
+select * from logic l1 where score <> any (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where score > all (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where score < all (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where score <> all (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where score <> any (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where score not < any (select score from logic l2 where l1.name <> l2.name); 
+select * from logic l1 where not score < any (select score from logic l2 where l1.name <> l2.name); 
+\q
+\df indexer.
+\q
+\q
+\c moode_test 
+\q
+\d
+\d message_tables
+select * from message_tables_id_seq 
+;
+select * from schema_migrations;
+delete from schema_migrations;
+drop table message_tables 
+;
+\d
+drop table schema_migrations ;
+\d
+\d
+\d
+\d+ channel_last_fetched 
+insert into channel_last_fetched ('channel_id', 'latest_ts', 'oldest_ts') values (1, 2, 3, 4, 5, 6);
+insert into channel_last_fetched (channel_id, latest_ts, oldest_ts) values (1, 2, 3, 4, 5, 6);
+\d channel
+\d channels
+\d users
+\d messages
+insert into channel_last_fetched ('channel_id', 'latest_ts', 'oldest_ts') values (1, 2, 3, 4, 5, 6);
+insert into channel_last_fetched (channel_id, latest_ts, oldest_ts) values (1, 2, 3, 4, 5, 6);
+insert into channel_last_fetched (channel_id, latest_ts, oldest_ts) values (1, 2, 3), (4, 5, 6);
+delete from channel_last_fetched;
+\d
+\d channel_last_fetched 
+\d channels
+insert into channels (slack_id, name) values ("blah", "general"), ("rand", "random");
+insert into channels (slack_id, name) values ("blah", "general");
+select * from channels;
+delete from channels;
+\d channels
+\d message
+\d messages
+\d users
+\d messages
+select count(*) from users;
+select count(*) from users;
+select count(*) from channels;
+select * from channels limit 1;
+select count(*) from users;
+select * from channels;
+select * from messages;
+\d messages;
+\d messages
+\q
+\d staging
+select * from staging;
+select * from staging;
+select * from staging;
+\d+ staging
+\df staging
+select exists (select tgname from pg_trigger where tgname='insert_message_trigger');
+select * from staging;
+\d messages
+\s staging
